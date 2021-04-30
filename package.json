@@ -25,6 +25,7 @@
   },
   "sideEffects": false,
   "dependencies": {
+    "@softwareventures/date": "^1.4.2",
     "tslib": "2.2.0"
   },
   "devDependencies": {
