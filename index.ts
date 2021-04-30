@@ -11,3 +11,6 @@ export function dateTemplate(
 ): DateFormatter {
     return date => concatMap(texts, (text, i) => [text, formatters[i]?.(date)]).join("");
 }
+
+/** Formats the day portion of the specified Date as a numeric string. */
+export const day: DateFormatter = date => String(date.day);
