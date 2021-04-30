@@ -4,7 +4,16 @@ import {Date} from "@softwareventures/date";
 /** A function that formats a Date or part of a Date as a string. */
 export type DateFormatter = (date: Date) => string;
 
-/** Constructs a function that formats a date using the specified template. */
+/** Constructs a function that formats a date using the specified template.
+ *
+ * This function is intended to be used as a template literal tag function.
+ *
+ * The template may contain placeholders which will be called as functions
+ * with the specified Date as their argument.
+ *
+ * @example
+ * const formatShortBritish = dateTemplate`${day2}/${month2}/${year2}`;
+ * const text = formatShortBritish(date); */
 export function dateTemplate(
     texts: TemplateStringsArray,
     ...formatters: readonly DateFormatter[]
