@@ -35,3 +35,6 @@ export const day: DateFormatter = date => String(date.day);
 
 /** Formats the day portion of the specfied Date as a 2-digit numeric string. */
 export const day2: DateFormatter = date => String(date.day).padStart(2, "0");
+
+/** Formats the specified Date as IS0 8601 extended, e.g. YYYY-MM-DD. */
+export const iso8601 = dateTemplate`${year4}-${month2}-${day2}`;
