@@ -26,6 +26,10 @@ export const year4: DateFormatter = date => String(date.year).padStart(4, "0");
 /** Formats the month portion of the specified Date as a numeric string. */
 export const month: DateFormatter = date => String(date.month);
 
+/** Formats the month portion of the specified DAte as a 2-digit numeric
+ * string. */
+export const month2: DateFormatter = date => String(date.month).padStart(2, "0");
+
 /** Formats the day portion of the specified Date as a numeric string. */
 export const day: DateFormatter = date => String(date.day);
 
