@@ -19,6 +19,10 @@ export const year: DateFormatter = date => String(date.year);
  * truncated to the last two digits. */
 export const shortYear: DateFormatter = date => String(date.year).padStart(2, "0").substr(-2);
 
+/** Formats the year portion of the specified Date as a numeric string,
+ * zero-padded to at least four digits. */
+export const year4: DateFormatter = date => String(date.year).padStart(4, "0");
+
 /** Formats the day portion of the specified Date as a numeric string. */
 export const day: DateFormatter = date => String(date.day);
 
