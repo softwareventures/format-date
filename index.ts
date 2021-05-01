@@ -1,7 +1,7 @@
 /** @file Convert @softwareventures/date to a string in a variety of formats. */
 
 import {concatMap} from "@softwareventures/array";
-import {Date} from "@softwareventures/date";
+import {Date, toReferenceDays} from "@softwareventures/date";
 
 /** A function that formats a Date or part of a Date as a string. */
 export type DateFormatter = (date: Date) => string;
@@ -94,6 +94,34 @@ export function day(date: {readonly day: number}): string {
 /** Formats the day portion of the specified Date as a 2-digit numeric string. */
 export function day2(date: {readonly day: number}): string {
     return String(date.day).padStart(2, "0");
+}
+
+export type DayOfWeek =
+    | "Sunday"
+    | "Monday"
+    | "Tuesday"
+    | "Wednesday"
+    | "Thursday"
+    | "Friday"
+    | "Saturday";
+
+const daysOfWeek: readonly DayOfWeek[] = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+];
+
+export function dayOfWeek(date: {
+    readonly year: number;
+    readonly month: number;
+    readonly day: number;
+}): DayOfWeek {
+    const {year, month, day} = date;
+    return daysOfWeek[(8 + (toReferenceDays({year, month, day}) % 7)) % 7];
 }
 
 /** Formats the specified Date as IS0 8601 extended, e.g. YYYY-MM-DD. */
