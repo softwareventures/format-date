@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "@softwareventures/format-date",
   "version": "0.0.0-development",
   "description": "Convert @softwareventures/date to a string in a variety of formats",
@@ -62,5 +61,8 @@
   },
   "release": {
     "extends": "@softwareventures/semantic-release-config"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
