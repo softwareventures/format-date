@@ -115,6 +115,8 @@ const daysOfWeek: readonly DayOfWeek[] = [
     "Saturday"
 ];
 
+/** Formats the name of the day-of-the-week of the specified Date as a string,
+ * e.g. "Monday". */
 export function dayOfWeek(date: {
     readonly year: number;
     readonly month: number;
