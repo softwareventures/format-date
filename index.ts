@@ -80,7 +80,7 @@ const monthNames: readonly MonthName[] = [
     "December"
 ];
 
-/** Formats the name of the month portion of the specified date as a string,
+/** Formats the name of the month portion of the specified Date as a string,
  * e.g. `"January"`. */
 export function monthName(date: {readonly month: number}): MonthName {
     return monthNames[date.month - 1];
