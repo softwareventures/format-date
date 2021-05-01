@@ -54,7 +54,7 @@ export function day(date: {readonly day: number}): string {
     return String(date.day);
 }
 
-/** Formats the day portion of the specfied Date as a 2-digit numeric string. */
+/** Formats the day portion of the specified Date as a 2-digit numeric string. */
 export function day2(date: {readonly day: number}): string {
     return String(date.day).padStart(2, "0");
 }
