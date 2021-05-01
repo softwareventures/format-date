@@ -43,7 +43,7 @@ export function month(date: {readonly month: number}): string {
     return String(date.month);
 }
 
-/** Formats the month portion of the specified DAte as a 2-digit numeric
+/** Formats the month portion of the specified Date as a 2-digit numeric
  * string. */
 export function month2(date: {readonly month: number}): string {
     return String(date.month).padStart(2, "0");
