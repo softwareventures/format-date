@@ -49,6 +49,41 @@ export function month2(date: {readonly month: number}): string {
     return String(date.month).padStart(2, "0");
 }
 
+export type MonthName =
+    | "January"
+    | "February"
+    | "March"
+    | "April"
+    | "May"
+    | "June"
+    | "July"
+    | "August"
+    | "September"
+    | "October"
+    | "November"
+    | "December";
+
+const monthNames: readonly MonthName[] = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+];
+
+/** Formats the name of the month portion of the specified date as a string,
+ * e.g. `"January"`. */
+export function monthName(date: {readonly month: number}): MonthName {
+    return monthNames[date.month - 1];
+}
+
 /** Formats the day portion of the specified Date as a numeric string. */
 export function day(date: {readonly day: number}): string {
     return String(date.day);
