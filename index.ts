@@ -1,3 +1,5 @@
+/** @file Convert @softwareventures/date to a string in a variety of formats. */
+
 import {concatMap} from "@softwareventures/array";
 import {Date} from "@softwareventures/date";
 
