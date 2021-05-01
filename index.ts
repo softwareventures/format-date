@@ -22,28 +22,42 @@ export function dateTemplate(
 }
 
 /** Formats the year portion of the specified Date as a numeric string. */
-export const year: DateFormatter = date => String(date.year);
+export function year(date: {readonly year: number}): string {
+    return String(date.year);
+}
 
 /** Formats the year portion of the specified Date as a numeric string
  * truncated to the last two digits. */
-export const shortYear: DateFormatter = date => String(date.year).padStart(2, "0").substr(-2);
+export function shortYear(date: {readonly year: number}): string {
+    return String(date.year).padStart(2, "0").substr(-2);
+}
 
 /** Formats the year portion of the specified Date as a numeric string,
  * zero-padded to at least four digits. */
-export const year4: DateFormatter = date => String(date.year).padStart(4, "0");
+export function year4(date: {readonly year: number}): string {
+    return String(date.year).padStart(4, "0");
+}
 
 /** Formats the month portion of the specified Date as a numeric string. */
-export const month: DateFormatter = date => String(date.month);
+export function month(date: {readonly month: number}): string {
+    return String(date.month);
+}
 
 /** Formats the month portion of the specified DAte as a 2-digit numeric
  * string. */
-export const month2: DateFormatter = date => String(date.month).padStart(2, "0");
+export function month2(date: {readonly month: number}): string {
+    return String(date.month).padStart(2, "0");
+}
 
 /** Formats the day portion of the specified Date as a numeric string. */
-export const day: DateFormatter = date => String(date.day);
+export function day(date: {readonly day: number}): string {
+    return String(date.day);
+}
 
 /** Formats the day portion of the specfied Date as a 2-digit numeric string. */
-export const day2: DateFormatter = date => String(date.day).padStart(2, "0");
+export function day2(date: {readonly day: number}): string {
+    return String(date.day).padStart(2, "0");
+}
 
 /** Formats the specified Date as IS0 8601 extended, e.g. YYYY-MM-DD. */
 export const iso8601 = dateTemplate`${year4}-${month2}-${day2}`;
