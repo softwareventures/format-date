@@ -3,12 +3,12 @@
   "version": "0.0.0-development",
   "description": "Convert @softwareventures/date to a string in a variety of formats",
   "keywords": [
+    "TypeScript",
     "date",
-    "time",
     "format",
-    "text",
     "string",
-    "TypeScript"
+    "text",
+    "time"
   ],
   "author": "Daniel Cassidy <mail@danielcassidy.me.uk>",
   "homepage": "https://github.com/softwareventures/format-date",
@@ -16,8 +16,8 @@
   "repository": "github:softwareventures/format-date",
   "license": "ISC",
   "scripts": {
-    "fix": "eslint . --fix && prettier --write .",
-    "lint": "eslint . && prettier --check .",
+    "fix": "tsc --noEmit && eslint . --fix && prettier --write .",
+    "lint": "tsc --noEmit && eslint . && prettier --check .",
     "prepare": "tsc",
     "semantic-release": "semantic-release",
     "test": "ava"
