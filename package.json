@@ -23,6 +23,9 @@
     "test": "ava"
   },
   "sideEffects": false,
+  "engines": {
+    "node": "^12 || ^14 || >=16"
+  },
   "dependencies": {
     "@softwareventures/array": "^3.10.0",
     "@softwareventures/date": "^1.4.2",
