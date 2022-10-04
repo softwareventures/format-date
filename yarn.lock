@@ -518,10 +518,10 @@
     "@softwareventures/ordered" "^0.2.0 || ^1.0.0"
     tslib "^2.0.0"
 
-"@softwareventures/date@^1.4.2 || ^2.0.0":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@softwareventures/date/-/date-2.0.3.tgz#d3d2b3e0cd7370eb6476a45e769f70bfdb9e69ea"
-  integrity sha512-53ak/QmNnDdf8YudJDvaqQLls0qOCxOcvNEZh0Tuk9gj+vb4JyH9fWBtB83JGYwce6Agnn2BopRqztV6o+B9bA==
+"@softwareventures/date@^1.4.2 || ^2.0.0 || ^3.0.0":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@softwareventures/date/-/date-2.0.4.tgz#557784af61fb34690607b163fe67de6d368664bd"
+  integrity sha512-cf4L7NStX+gLTzK1Q5nTWxG1D5nz1o/Q6DqWjGOH/lWSa05c5UTig6fzmRJP1OA/DQ2gGZ0vJZh772+zc1aXkA==
   dependencies:
     "@softwareventures/ordered" "^0.2.1 || ^1.0.0"
     "@types/is-integer" "1.0.0"
