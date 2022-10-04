@@ -1,7 +1,8 @@
 /** @file Convert @softwareventures/date to a string in a variety of formats. */
 
 import {concatMap} from "@softwareventures/array";
-import {Date, toReferenceDays} from "@softwareventures/date";
+import type {Date} from "@softwareventures/date";
+import {toReferenceDays} from "@softwareventures/date";
 import {notNull} from "@softwareventures/nullable";
 
 /** A function that formats a Date or part of a Date as a string. */
