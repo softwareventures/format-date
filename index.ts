@@ -2,6 +2,7 @@
 
 import {concatMap} from "@softwareventures/array";
 import {Date, toReferenceDays} from "@softwareventures/date";
+import {notNull} from "@softwareventures/nullable";
 
 /** A function that formats a Date or part of a Date as a string. */
 export type DateFormatter = (date: Date) => string;
@@ -83,7 +84,7 @@ const monthNames: readonly MonthName[] = [
 /** Formats the name of the month portion of the specified Date as a string,
  * e.g. `"January"`. */
 export function monthName(date: {readonly month: number}): MonthName {
-    return monthNames[date.month - 1];
+    return notNull(monthNames[date.month - 1]);
 }
 
 /** Formats the day portion of the specified Date as a numeric string. */
@@ -123,7 +124,7 @@ export function dayOfWeek(date: {
     readonly day: number;
 }): DayOfWeek {
     const {year, month, day} = date;
-    return daysOfWeek[(8 + (toReferenceDays({year, month, day}) % 7)) % 7];
+    return notNull(daysOfWeek[(8 + (toReferenceDays({year, month, day}) % 7)) % 7]);
 }
 
 /** Formats the specified Date as IS0 8601 extended, e.g. YYYY-MM-DD. */
