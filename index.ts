@@ -5,15 +5,17 @@ import type {Date} from "@softwareventures/date";
 import {toReferenceDays} from "@softwareventures/date";
 import {notNull} from "@softwareventures/nullable";
 
-/** A function that formats a Date or part of a Date as a string. */
+/** A function that formats a {@link Date} or part of a {@link Date} as a
+ * string. */
 export type DateFormatter = (date: Date) => string;
 
-/** Constructs a function that formats a Date using the specified template.
+/** Constructs a function that formats a {@link Date} using the specified
+ * template.
  *
  * This function is intended to be used as a template literal tag function.
  *
  * The template may contain placeholders which will be called as functions
- * with the specified Date as their argument.
+ * with the specified {@link Date} as their argument.
  *
  * @example
  * const formatShortBritish = dateTemplate`${day2}/${month2}/${year2}`;
@@ -25,30 +27,32 @@ export function dateTemplate(
     return date => concatMap(texts, (text, i) => [text, formatters[i]?.(date)]).join("");
 }
 
-/** Formats the year portion of the specified Date as a numeric string. */
+/** Formats the year portion of the specified {@link Date} as a numeric
+ * string. */
 export function year(date: {readonly year: number}): string {
     return String(date.year);
 }
 
-/** Formats the year portion of the specified Date as a numeric string
+/** Formats the year portion of the specified {@link Date} as a numeric string
  * truncated to the last two digits. */
 export function shortYear(date: {readonly year: number}): string {
     return String(date.year).padStart(2, "0").substr(-2);
 }
 
-/** Formats the year portion of the specified Date as a numeric string,
+/** Formats the year portion of the specified {@link Date} as a numeric string,
  * zero-padded to at least four digits. */
 export function year4(date: {readonly year: number}): string {
     return String(date.year).padStart(4, "0");
 }
 
-/** Formats the month portion of the specified Date as a numeric string. */
+/** Formats the month portion of the specified {@link Date} as a numeric
+ * string. */
 export function month(date: {readonly month: number}): string {
     return String(date.month);
 }
 
-/** Formats the month portion of the specified Date as a 2-digit numeric
- * string. */
+/** Formats the month portion of the specified {@link Date} as a 2-digit
+ * numeric string. */
 export function month2(date: {readonly month: number}): string {
     return String(date.month).padStart(2, "0");
 }
@@ -82,18 +86,20 @@ const monthNames: readonly MonthName[] = [
     "December"
 ];
 
-/** Formats the name of the month portion of the specified Date as a string,
- * e.g. `"January"`. */
+/** Formats the name of the month portion of the specified {@link Date} as a
+ * string, e.g. `"January"`. */
 export function monthName(date: {readonly month: number}): MonthName {
     return notNull(monthNames[date.month - 1]);
 }
 
-/** Formats the day portion of the specified Date as a numeric string. */
+/** Formats the day portion of the specified {@link Date} as a numeric
+ * string. */
 export function day(date: {readonly day: number}): string {
     return String(date.day);
 }
 
-/** Formats the day portion of the specified Date as a 2-digit numeric string. */
+/** Formats the day portion of the specified {@link Date} as a 2-digit numeric
+ * string. */
 export function day2(date: {readonly day: number}): string {
     return String(date.day).padStart(2, "0");
 }
@@ -117,8 +123,8 @@ const daysOfWeek: readonly DayOfWeek[] = [
     "Saturday"
 ];
 
-/** Formats the name of the day-of-the-week of the specified Date as a string,
- * e.g. "Monday". */
+/** Formats the name of the day-of-the-week of the specified {@link Date} as a
+ * string, e.g. `"Monday"`. */
 export function dayOfWeek(date: {
     readonly year: number;
     readonly month: number;
@@ -128,5 +134,6 @@ export function dayOfWeek(date: {
     return notNull(daysOfWeek[(8 + (toReferenceDays({year, month, day}) % 7)) % 7]);
 }
 
-/** Formats the specified Date as IS0 8601 extended, e.g. YYYY-MM-DD. */
+/** Formats the specified {@link Date} as IS0 8601 extended, e.g.
+ * `"YYYY-MM-DD"`. */
 export const iso8601 = dateTemplate`${year4}-${month2}-${day2}`;
