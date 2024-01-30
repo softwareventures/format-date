@@ -663,6 +663,19 @@
     is-integer-in-range "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0"
     tslib "^1.9.3 || ^2.0.0 || ^2.1.0"
 
+"@softwareventures/date@^1.4.2 || ^2.0.0 || ^3.0.0 || ^4.0.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@softwareventures/date/-/date-4.1.0.tgz#03f20921dabe9c27083b3898f83340a0d8ff176f"
+  integrity sha512-O99nhLDLhsjZP/5xCoYN/CBI6W12Uk13hVmqMpcPayrM1D5vSJGaJCYtbTWoyI2VepyD5tClCSMDFAlchGukoA==
+  dependencies:
+    "@softwareventures/format-date" "^1.0.0"
+    "@softwareventures/ordered" "^0.2.1 || ^1.0.0 || ^2.0.0"
+    "@types/is-integer" "^1.0.2"
+    is-integer "^1.0.7"
+    is-integer-in-range "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0"
+    tslib "^2.1.0"
+    unknown "^0.2.5"
+
 "@softwareventures/eslint-config@7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@softwareventures/eslint-config/-/eslint-config-7.2.0.tgz#66d1075e582fcd1093ac5ed296d1c3f9b8b83525"
@@ -751,7 +764,7 @@
   resolved "https://registry.yarnpkg.com/@types/is-integer/-/is-integer-1.0.0.tgz#8393445ad14b2b51c9ac7e91220de0efc8de2028"
   integrity sha512-AAFRQhSVYdpQgKEkUY+bMRL8yAZSq7h7AY14iSK1xod4wOdH4Gc/KMAR4tlSo9Sf5KsYizWwlJOnLCbet5AU2A==
 
-"@types/is-integer@^1.0.0":
+"@types/is-integer@^1.0.0", "@types/is-integer@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/is-integer/-/is-integer-1.0.2.tgz#6ea8acb26466344004867743ab18de2289b0afc1"
   integrity sha512-vf5QKHpLtM0zxUdHLEOPYwTRYSHFJE7ECkpNAnq06eHAfK1O6ANdsefd9Qbu/0OUcdh67/D5GT/ZXitT9YNXbA==
@@ -5452,6 +5465,11 @@ universalify@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.1.tgz#168efc2180964e6386d061e094df61afe239b18d"
   integrity sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==
+
+unknown@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/unknown/-/unknown-0.2.5.tgz#673a9bd591fa5ac3bbc56531e68fb6e7cef91c98"
+  integrity sha512-DzDwBz0BF7SZnzfiw6RmESjDKRpJv97kZkcb52xifBGR2CNgvra2DIlhgEXiHJeNOamYHapcPTxam8ff5x+2YA==
 
 uri-js@^4.2.2:
   version "4.4.1"
